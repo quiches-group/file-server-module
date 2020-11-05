@@ -1,16 +1,16 @@
-#Filer Server Module
+# Filer Server Module
 
 ![npm](https://img.shields.io/npm/v/@maxencemottard/file-server-module?style=for-the-badge)
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/MaxenceMottard/file-server-module/actions?style=for-the-badge)
 
-##Description
+## Description
 
 This package is used to connect and upload files to my file server. To be able to use this service,
 it is necessary to make me a request for a token. It is also possible to install the file server
 on your machine but the package is not yet public.
 
 
-##Documentation
+## Documentation
 
 ### 1- Installation
 
