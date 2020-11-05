@@ -7,7 +7,7 @@ on:
       - '**.md'
 jobs:
 
-  build:
+  build-deploy:
     name: Build and Deploy
     runs-on: ubuntu-latest
 
@@ -17,9 +17,12 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 14.13.1
+          registry-url: 'https://registry.npmjs.org'
       - run: npm install
       - run: npm run lint
       - run: npm run build
-      - run: npm set //registry.npmjs.org/:_authToken={{secrets.NPM_TOKEN}}
-      - run: npm publish --access public
+      - name: Publish to NPM
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
