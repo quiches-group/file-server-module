@@ -8,7 +8,7 @@ export default class FileServer {
 
     hostname: string;
 
-    constructor(apiKey: string, hostname = 'https://bay.maxencemottard.com') {
+    constructor({ apiKey, hostname = 'https://bay.maxencemottard.com' }: { apiKey: string; hostname?: string }) {
         this.apiKey = apiKey;
         this.hostname = hostname;
     }

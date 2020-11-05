@@ -1,6 +1,6 @@
 {
   "name": "@maxencemottard/file-server-module",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "main": "build/index.js",
   "license": "MIT",
   "dependencies": {
