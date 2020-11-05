@@ -31,5 +31,6 @@
         "no-underscore-dangle": 0,
         "@typescript-eslint/ban-ts-ignore": 0,
         "@typescript-eslint/ban-ts-comment": 0
-    }
+    },
+    "ignorePatterns": [ "build/*", "node_modules/*" ]
 }
