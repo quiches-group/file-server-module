@@ -1,6 +1,6 @@
 {
   "name": "@maxencemottard/file-server-module",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "build/index.js",
   "license": "MIT",
   "dependencies": {
@@ -26,7 +26,7 @@
     "url": "git+https://github.com/MaxenceMottard/file-server-module"
   },
   "scripts": {
-    "build": "npx tsc --declaration",
+    "build": "npx tsc",
     "lint": "npx eslint ./src/**/*.ts --color",
     "lint:fix": "npx eslint ./src/**/*.ts --fix"
   }
