@@ -1,16 +1,16 @@
-name: actions
+name: deploy
+
 on:
-  push:
-    branches:
-      - master
-    paths-ignore:
-      - '**.md'
+  create:
+    tags:
+      - v*
+
 jobs:
-
   build-deploy:
-    name: Build and Deploy
+    env:
+      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+    name: Deploy
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js
@@ -19,10 +19,7 @@ jobs:
           node-version: 14.13.1
           registry-url: 'https://registry.npmjs.org'
       - run: npm install
-      - run: npm run lint
       - run: npm run build
       - name: Publish to NPM
         run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
